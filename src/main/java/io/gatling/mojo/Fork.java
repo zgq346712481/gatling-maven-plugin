@@ -116,7 +116,7 @@ class Fork {
       log.debug(StringUtils.join(classpath.iterator(), ",\n"));
     }
 
-    this.jvmArgs.add(MojoUtils.createBooterJar(classpath, MainWithArgsInFile.class.getName()).getCanonicalPath());
+    this.jvmArgs.add(MojoUtils.createBooterJar(classpath, MainWithArgsInFile.class.getName(), log).getCanonicalPath());
 
     List<String> command = buildCommand();
 
